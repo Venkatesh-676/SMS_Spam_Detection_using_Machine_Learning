@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>Signup Page</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: white;
+            }
+            button{
+                background-color: #4CAF50;
+                width: 25%;
+                padding: 15px;
+                color: black;
+                border: none;
+                float: center;
+                font-size: 15px;
+            }
+            label{
+                font-size: 20px;
+            }
+            form{
+                border: 3px solid #f1f1f1;
+            }
+            input[type=email],input[type=text]{
+                width: 50%;
+                font-size: 15px;
+                margin: 8px 0px;
+                padding: 12px 20px;
+                display: inline-block;
+                border: 2px solid green;
+                box-sizing: border-box;
+            }
+            input[type=radio]{
+                height: 18px;
+                width: 18px;
+            }
+            button:hover{
+                opacity:0.7;
+
+            }
+            .container{
+                padding: 50px;
+                background-color: white;
+            }
+            .imgcontainer {
+                text-align: center;
+                margin: 24px 0 12px 0;
+            }
+              
+            img.avatar {
+                width: 10%;
+                border-radius: 50%;
+            }  
+        </style>
+    </head>
+    <body>
+        <center><h1>SMS Spam Detection Using Machine Learning</h1></center>
+        <center><h2>Submit the Details</h2></center>
+        <form action="#" method="post">
+            {% csrf_token %}
+            {% load static %}
+            <center><div class="container">
+                <label for='Age'><b>Age : </b></label>
+		        <input type='text' placeholder="Enter your Age" name='Age' required><br>
+		        <label for='sex' ><b>Sex : </b></label>
+		        <input type='radio' name='sex' value='male' required>
+		        <label ><b>Male</b></label>
+		        <input type='radio' name='sex' value='female' required>
+		        <label ><b>Female</b></label><br>
+            	<label for ='BMI'><b>BMI :  </b></label>
+            	<input type="text" placeholder="Enter BMI" name="BMI" float="right"  required><br>  
+            	<label for='childern'><b>childern: </b></label>
+            	<input type="text" placeholder="Enter No Of childern" name="childern" required><br>
+                <label for='smoker' ><b>Smoker : </b></label>  
+                <input type='radio' name='smoker' value='yes' required>
+		        <label ><b>Yes</b></label>
+		        <input type='radio' name='smoker' value='No' required>
+		        <label ><b>No</b></label><br>
+                <label for='region' ><b>Region : </b></label>
+                <input type='radio' name='region' value='Southeast' required>
+		        <label ><b>Southeast</b></label>
+		        <input type='radio' name='region' value='Southwest' required>
+		        <label ><b>Southwest</b></label>
+                <input type='radio' name='region' value='Northeast' required>
+		        <label ><b>Northeast</b></label>
+		        <input type='radio' name='region' value='Northwest' required>
+		        <label ><b>Northwest</b></label><br>
+            	<button type="submit"><b>Submit</b></button><br>     
+            </div></center>
+        </form>
+    </body>
+</html>
